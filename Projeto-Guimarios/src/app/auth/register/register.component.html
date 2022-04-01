@@ -1,0 +1,51 @@
+<section class="background-login">
+  <div class="screen-register">
+    <header class="header-register">
+      <div class="header-logo">
+        <img src="../../../assets/Logo_Logomark_1.png" />
+        <h1>Guimarios</h1>
+      </div>
+
+      <div class="header-title">
+        <h1 *ngIf="viewController.personalData">Dados Pessoais</h1>
+        <h1 *ngIf="viewController.address">Endereço</h1>
+        <h1 *ngIf="viewController.finishRegister">Finalizar</h1>
+      </div>
+
+      <div class="header-nav">
+        <nav>
+          <ul>
+              <li>
+                <a (click)="personalData()"><i class="bi bi-person-circle"></i></a>
+              </li>
+              <div class="line-link"></div>
+              <li>
+                <a (click)="address()"><i class="bi bi-house-door"></i></a>
+              </li>
+              <div class="line-link"></div>
+              <li>
+                <a (click)="finishRegister()"><i class="bi bi-check-circle-fill"></i></a>
+              </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+
+      <ng-container *ngIf="viewController.personalData"
+        ><app-personal-data (formEmitterPersonalDate)="setPersonalData($event)"></app-personal-data
+      ></ng-container>
+
+      <ng-container *ngIf="viewController.address"
+        ><app-address (formEmitterAddress)="setAddress($event)"></app-address
+      ></ng-container>
+
+      <ng-container *ngIf="viewController.finishRegister"
+        ><app-finish-register (formEmitterFinish)="setFinishRegister($event)"></app-finish-register
+      ></ng-container>
+
+    </main>
+
+  </div>
+</section>

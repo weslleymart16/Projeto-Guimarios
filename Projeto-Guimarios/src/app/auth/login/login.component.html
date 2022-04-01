@@ -1,0 +1,38 @@
+<div class="background-login">
+  <div class="screen-login">
+    <div class="logo-guimarios">
+      <img src="../../../assets/Logo_Logomark_1.png" alt="logo guimarios">
+      <h1>Guimarios</h1>
+    </div>
+
+    <div class="form-login-container">
+
+      <mat-form-field appearance="fill">
+        <mat-label>Endereço de E-mail</mat-label>
+        <input matInput required>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Senha</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'" required="">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <section class="example-section">
+        <mat-checkbox color="" class="check-login">Mantenha-me conectado</mat-checkbox>
+      </section>
+
+    </div>
+
+    <div class="footer-login">
+      <button mat-raised-button color="primary">Entrar</button>
+      <a href="#">Esquece a senha ?</a>
+      <p>Não tem uma conta? Cadastre-se <a href="#">aqui</a></p>
+    </div>
+
+
+  </div>
+
+</div>

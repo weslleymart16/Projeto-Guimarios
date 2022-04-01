@@ -1,0 +1,58 @@
+<main class="container-form-register">
+
+    <form [formGroup]="formsAddress" class="form-register">
+
+      <div class="form-register-input">
+        <mat-form-field appearance="fill">
+          <mat-label>Rua</mat-label>
+          <input formControlName="rua" matInput required>
+        </mat-form-field>
+      </div>
+
+
+      <div class="form-register-input">
+        <mat-form-field appearance="fill">
+          <mat-label>Complemento</mat-label>
+          <input formControlName="complemento" matInput required>
+        </mat-form-field>
+      </div>
+
+
+      <div class="form-register-input">
+        <mat-form-field appearance="fill">
+          <mat-label>Bairro</mat-label>
+          <input formControlName="bairro" matInput required>
+        </mat-form-field>
+      </div>
+
+
+      <div class="form-register-input">
+        <mat-form-field appearance="fill">
+          <mat-label>Cidade</mat-label>
+          <input formControlName="cidade" matInput required>
+        </mat-form-field>
+      </div>
+
+
+      <div class="form-register-input">
+        <mat-form-field appearance="fill">
+          <mat-label>Número</mat-label>
+          <input formControlName="numero" matInput required>
+        </mat-form-field>
+      </div>
+
+
+      <div class="form-register-input">
+        <mat-form-field appearance="fill">
+          <mat-label>Estado</mat-label>
+          <input formControlName="estado" matInput required>
+        </mat-form-field>
+      </div>
+
+    </form>
+
+    <button (click)="teste()" class="button-next" mat-raised-button color="primary">Próximo</button>
+
+
+</main>
+

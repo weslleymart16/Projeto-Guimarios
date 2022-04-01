@@ -1,0 +1,105 @@
+.pag-dashboard {
+  background: rgb(237 237 237);
+  width: 100vw;
+  height: 100vh;
+}
+
+.header-dashboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.logo-dashboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
+}
+.logo-dashboard img {
+  width: 35px;
+  height: 35px;
+  margin-bottom: 10px;
+}
+.logo-dashboard h1 {
+  margin-left: 20px;
+  font-size: 16px;
+}
+
+.user-dashboard h1 {
+  font-size: 16px;
+  margin-right: 50px;
+}
+
+.title h1 {
+  margin-top: 10px;
+}
+
+/* Fim do header */
+
+.main-dashboard {
+  margin: 20px 90px;
+}
+
+.nav-dashboard ul {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0;
+}
+.nav-dashboard li {
+  list-style: none;
+}
+
+.button-nav-dashboard {
+  width: 100px;
+}
+
+.button-nav-dashboard:hover {
+  border-bottom: 2px solid #07bce5;
+}
+
+.subtitle-dashboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+.subtitle-dashboard a{
+  text-decoration: none;
+  color: #07bce5;
+  font-size: 16px;
+}
+.subtitle-dashboard a:hover {
+  color: #0ba3c5;
+}
+
+.section-cursos-dashboard {
+  margin-top: 20px;
+}
+.section-cursos-dashboard mat-expansion-panel {
+  border-radius: 10px;
+}
+
+.section-cursos-dashboard mat-panel-title {
+ margin-top: 15px;
+}
+
+.container-textarea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container-textarea button {
+  background-color: #0ba3c5;
+  width: 150px;
+  border-radius: 10px;
+}
+
+.description-section-course {
+  width: 1140px;
+  border-radius: 30px;
+}

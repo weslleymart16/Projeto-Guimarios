@@ -1,0 +1,60 @@
+<main class="container-form-register">
+  <form [formGroup]="formsPersonalDate" class="form-register">
+    <div class="form-register-input">
+      <mat-form-field appearance="fill">
+        <mat-label>Nome</mat-label>
+        <input formControlName="nome" matInput required />
+      </mat-form-field>
+    </div>
+
+    <div class="form-register-input">
+      <mat-form-field appearance="fill">
+        <mat-label>Data de nascimento</mat-label>
+        <input formControlName="dataDeNascimento" matInput required />
+      </mat-form-field>
+    </div>
+
+    <div class="form-register-input">
+      <mat-form-field appearance="fill">
+        <mat-label>Sobrenome</mat-label>
+        <input formControlName="sobrenome" matInput required />
+      </mat-form-field>
+    </div>
+
+    <div class="form-register-input">
+      <mat-form-field appearance="fill">
+        <mat-label>Gênero</mat-label>
+        <mat-select required formControlName="genero">
+          <mat-option value="Masculino">Masculino</mat-option>
+          <mat-option value="Feminino">Feminino</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="form-register-input">
+      <mat-form-field appearance="fill">
+        <mat-label>CPF</mat-label>
+        <input formControlName="cpf" matInput required />
+      </mat-form-field>
+    </div>
+
+    <div class="form-register-input">
+      <mat-form-field appearance="fill">
+        <mat-label>Turma</mat-label>
+        <mat-select required formControlName="turma">
+          <mat-option value="1">1</mat-option>
+          <mat-option value="2">2</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </form>
+
+  <button
+    class="button-next"
+    (click)="formPersonalDataEmit()"
+    mat-raised-button
+    color="primary"
+  >
+    Próximo
+  </button>
+</main>
