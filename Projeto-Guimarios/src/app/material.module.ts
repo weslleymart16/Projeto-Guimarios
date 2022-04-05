@@ -11,6 +11,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 
@@ -33,7 +34,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatSelectModule,
     MatStepperModule,
     MatDividerModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatSnackBarModule
 
   ],
   declarations: []

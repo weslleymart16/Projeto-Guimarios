@@ -5,16 +5,16 @@
       <h1>Guimarios</h1>
     </div>
 
-    <div class="form-login-container">
+    <form [formGroup]="loginForm" class="form-login-container">
 
       <mat-form-field appearance="fill">
         <mat-label>Endereço de E-mail</mat-label>
-        <input matInput required>
+        <input formControlName="email" matInput required>
       </mat-form-field>
 
       <mat-form-field appearance="fill">
         <mat-label>Senha</mat-label>
-        <input matInput [type]="hide ? 'password' : 'text'" required="">
+        <input formControlName="senha" matInput [type]="hide ? 'password' : 'text'" required="">
         <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
           <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
         </button>
@@ -24,10 +24,10 @@
         <mat-checkbox color="" class="check-login">Mantenha-me conectado</mat-checkbox>
       </section>
 
-    </div>
+    </form>
 
     <div class="footer-login">
-      <button mat-raised-button color="primary">Entrar</button>
+      <button mat-raised-button color="primary" [disabled]="!loginForm.valid">Entrar</button>
       <a href="#">Esquece a senha ?</a>
       <p>Não tem uma conta? Cadastre-se <a href="#">aqui</a></p>
     </div>

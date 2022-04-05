@@ -1,6 +1,6 @@
 <main class="container-form-register">
 
-  <form [formGroup]="formsFinishRegister" class="form-register">
+  <form [formGroup]="formsFinishRegister" class="form-register" (ngSubmit)="onSubmit()">
 
     <div class="form-register-input">
       <mat-form-field appearance="fill">
@@ -34,7 +34,7 @@
 
   </form>
 
-  <button class="button-next" (click)="teste()" mat-raised-button color="primary">Finalizar</button>
+  <button class="button-next" (click)="formFinishRegisterEmit()" mat-raised-button color="primary" [disabled]="!formsFinishRegister.valid">Finalizar</button>
 
 
 </main>

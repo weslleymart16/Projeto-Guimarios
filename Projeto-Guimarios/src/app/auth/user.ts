@@ -1,12 +1,17 @@
-export interface User {
-  firsname: string;
-  lastname: string;
-  address: string;
-  city: string;
-  state: string;
-  phone: string;
-  mobilephone: string;
+export class User {
+  nome: string;
+  dataDeNascimento: string;
+  sobrenome: string;
+  genero: string;
+  cpf: string;
+  turma: string;
+  rua: string;
+  complemento: string;
+  bairro: string;
+  cidade: string;
+  numero: string;
+  estado: string;
   email: string;
-  password?: string;
+  senha?: string;
   id?: string;
 }

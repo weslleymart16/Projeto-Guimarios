@@ -1,6 +1,6 @@
 <main class="container-form-register">
 
-    <form [formGroup]="formsAddress" class="form-register">
+    <form [formGroup]="formsAddress" class="form-register" (ngSubmit)="onSubmit()">
 
       <div class="form-register-input">
         <mat-form-field appearance="fill">
@@ -51,7 +51,7 @@
 
     </form>
 
-    <button (click)="teste()" class="button-next" mat-raised-button color="primary">Próximo</button>
+    <button (click)="teste()" class="button-next" mat-raised-button color="primary" [disabled]="!formsAddress.valid">Próximo</button>
 
 
 </main>

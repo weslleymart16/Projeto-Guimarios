@@ -1,4 +1,5 @@
-import { FormGroup } from '@angular/forms';
+import { User } from './../user';
+import { AuthService } from './../auth.service';
 import { ViewController } from './model/viewController.model';
 import { Component, OnInit } from '@angular/core';
 
@@ -14,7 +15,7 @@ export class RegisterComponent implements OnInit {
   address$: any
   finishRegister$: any
 
-  constructor() { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
     this.viewController.personalData = true;
@@ -38,24 +39,27 @@ export class RegisterComponent implements OnInit {
   }
 
   personalData(){
+
     this.viewController.personalData = true;
     this.viewController.address = false;
     this.viewController.finishRegister = false;
+    
   }
+
   address(){
+
     this.viewController.personalData = false;
     this.viewController.address = true;
     this.viewController.finishRegister = false;
+
   }
+
   finishRegister(){
+
     this.viewController.personalData = false;
     this.viewController.address = false;
     this.viewController.finishRegister = true;
+
   }
-
-
-
-
-
 
 }

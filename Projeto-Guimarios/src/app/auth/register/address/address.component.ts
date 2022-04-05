@@ -1,5 +1,6 @@
+import { User } from './../../user';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-address',
@@ -15,12 +16,12 @@ export class AddressComponent implements OnInit {
 
     this.formsAddress = this.formBuilder.group({
 
-      rua: [''],
-      complemento: [''],
-      bairro: [''],
-      cidade: [''],
-      numero: [''],
-      estado: ['']
+      rua: ['', [Validators.required]],
+      complemento: ['', [Validators.required]],
+      bairro: ['', [Validators.required]],
+      cidade: ['', [Validators.required]],
+      numero: ['', [Validators.required]],
+      estado: ['', [Validators.required]]
 
     });
 
@@ -32,6 +33,19 @@ export class AddressComponent implements OnInit {
   teste() {
     console.log(this.formsAddress.value)
     this.formEmitterAddress.emit(this.formsAddress.value)
+  }
+
+  onSubmit(){
+
+    const newUserAddress = new User();
+
+     newUserAddress.rua = this.formsAddress.value.rua;
+     newUserAddress.complemento = this.formsAddress.value.complemento;
+     newUserAddress.bairro = this.formsAddress.value.bairro;
+     newUserAddress.cidade = this.formsAddress.value.cidade;
+     newUserAddress.numero = this.formsAddress.value.numero;
+     newUserAddress.estado = this.formsAddress.value.estado;
+
   }
 
 }
