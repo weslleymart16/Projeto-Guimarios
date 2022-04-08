@@ -43,22 +43,5 @@ export class FinishRegisterComponent implements OnInit {
     return { matching: false };
   }
 
-  onSubmit(){
-
-    const newUserFinishRegister = new User();
-
-     newUserFinishRegister.nome = this.formsFinishRegister.value.email;
-     newUserFinishRegister.dataDeNascimento = this.formsFinishRegister.value.senha;
-
-     this.authService.register(newUserFinishRegister)
-     .subscribe(
-       (u) => {
-         this.snackBar.open(
-           'successfully registered. Use your new credentials to sign in', 'OK', {duration: 2000}
-         );
-         this.router.navigateByUrl('/login');
-       }
-     );
-
-  }
+ 
 }

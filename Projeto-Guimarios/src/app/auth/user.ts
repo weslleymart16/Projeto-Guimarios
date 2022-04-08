@@ -12,6 +12,6 @@ export class User {
   numero: string;
   estado: string;
   email: string;
-  senha?: string;
+  senha: string;
   id?: string;
 }

@@ -15,7 +15,7 @@ export class PersonalDataComponent implements OnInit {
   formsPersonalDate!: FormGroup;
   @Output() formEmitterPersonalDate = new EventEmitter();
 
-  constructor(private formBuilder: FormBuilder, private authService: AuthService, private snackBar: MatSnackBar, private router: Router) {
+  constructor(private formBuilder: FormBuilder) {
 
     this.formsPersonalDate = this.formBuilder.group({
 
@@ -36,28 +36,6 @@ export class PersonalDataComponent implements OnInit {
   formPersonalDataEmit() {
     console.log(this.formsPersonalDate.value)
     this.formEmitterPersonalDate.emit(this.formsPersonalDate.value)
-  }
-
-  onSubmit(){
-
-    const newUserPersonalDate = new User();
-
-     newUserPersonalDate.nome = this.formsPersonalDate.value.nome;
-     newUserPersonalDate.dataDeNascimento = this.formsPersonalDate.value.dataDeNascimento;
-     newUserPersonalDate.sobrenome = this.formsPersonalDate.value.sobrenome;
-     newUserPersonalDate.genero = this.formsPersonalDate.value.genero;
-     newUserPersonalDate.cpf = this.formsPersonalDate.value.cpf;
-     newUserPersonalDate.turma = this.formsPersonalDate.value.turma;
-
-     this.authService.register(newUserPersonalDate)
-        .subscribe(
-          (u) => {
-            this.snackBar.open(
-              'successfully registered. Use your new credentials to sign in', 'OK', {duration: 2000}
-            );
-            this.router.navigateByUrl('/login');
-          }
-        );
   }
 
 }

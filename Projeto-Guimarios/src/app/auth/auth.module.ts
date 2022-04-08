@@ -1,3 +1,4 @@
+import { AuthGuard } from './../core/guards/auth-guard';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -27,6 +28,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     AuthRoutingModule,
     MaterialModule,
     ReactiveFormsModule,
+  ],
+  providers: [
+    AuthGuard
   ]
 })
 export class AuthModule { }

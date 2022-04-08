@@ -5,7 +5,7 @@
       <h1>Guimarios</h1>
     </div>
 
-    <form [formGroup]="loginForm" class="form-login-container">
+    <form [formGroup]="loginForm" class="form-login-container" >
 
       <mat-form-field appearance="fill">
         <mat-label>Endereço de E-mail</mat-label>
@@ -27,10 +27,11 @@
     </form>
 
     <div class="footer-login">
-      <button mat-raised-button color="primary" [disabled]="!loginForm.valid">Entrar</button>
+      <button mat-raised-button color="primary" [disabled]="!loginForm.valid" (click)="onSubmit()" >Entrar</button>
       <a href="#">Esquece a senha ?</a>
-      <p>Não tem uma conta? Cadastre-se <a href="#">aqui</a></p>
+      <p>Não tem uma conta? Cadastre-se <a href="#" (click)="register()">aqui</a></p>
     </div>
+    <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
 
 
   </div>
