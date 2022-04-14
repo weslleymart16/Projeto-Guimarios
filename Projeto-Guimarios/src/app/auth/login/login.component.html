@@ -1,7 +1,7 @@
 <div class="background-login">
   <div class="screen-login">
     <div class="logo-guimarios">
-      <img src="../../../assets/Logo_Logomark_1.png" alt="logo guimarios">
+      <img routerLink="/login" src="../../../assets/Logo_Logomark_1.png" alt="logo guimarios">
       <h1>Guimarios</h1>
     </div>
 
@@ -20,8 +20,8 @@
         </button>
       </mat-form-field>
 
-      <section class="example-section">
-        <mat-checkbox color="" class="check-login">Mantenha-me conectado</mat-checkbox>
+      <section class="checkbox-login">
+        <mat-checkbox (change)="teste()" color="primary">Mantenha-me conectado</mat-checkbox>
       </section>
 
     </form>
@@ -29,8 +29,9 @@
     <div class="footer-login">
       <button mat-raised-button color="primary" [disabled]="!loginForm.valid" (click)="onSubmit()" >Entrar</button>
       <a href="#">Esquece a senha ?</a>
-      <p>Não tem uma conta? Cadastre-se <a href="#" (click)="register()">aqui</a></p>
+      <p>Não tem uma conta? Cadastre-se <a (click)="register()">aqui</a></p>
     </div>
+
     <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
 
 

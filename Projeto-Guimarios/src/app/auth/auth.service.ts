@@ -4,7 +4,7 @@ import { User } from './user';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword  } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithRedirect, inMemoryPersistence, GoogleAuthProvider, setPersistence   } from "firebase/auth";
 
 @Injectable({
   providedIn: 'root'
@@ -50,6 +50,7 @@ export class AuthService {
   logout(){
 
     this.afAuth.signOut();
+    this.router.navigateByUrl('/login')
 
   }
 

@@ -3,11 +3,12 @@
   <header class="header-dashboard">
 
     <div class="logo-dashboard title">
-      <img src="../../../assets/Logo_Logomark_1.png" alt="logo">
+      <img routerLink="/login" src="../../../assets/Logo_Logomark_1.png" alt="logo">
       <h1>Acompanhamento de cursos</h1>
     </div>
-    <div class="user-dashboard title">
+    <div class="user-dashboard title rigth-header">
       <h1>Weslley Martins</h1>
+      <button mat-raised-button (click)="logout()">Logout</button>
     </div>
 
   </header>

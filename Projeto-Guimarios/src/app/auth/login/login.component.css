@@ -29,6 +29,7 @@
 .logo-guimarios img {
   width: 74px;
   height: 74px;
+  cursor: pointer;
 }
 
 .logo-guimarios h1 {
@@ -59,6 +60,7 @@
   padding-top: 50px;
   text-decoration: none;
   color: #07bce5;
+  cursor: pointer;
 }
 
 .footer-login p {

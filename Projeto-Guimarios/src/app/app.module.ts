@@ -10,6 +10,7 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { environment } from './../environments/environment';
 import { AuthModule } from './auth/auth.module';
+import { NgxMaskModule } from 'ngx-mask';
 
 
 @NgModule({
@@ -25,6 +26,9 @@ import { AuthModule } from './auth/auth.module';
     AngularFirestoreModule,
     AuthModule,
     AppRoutingModule,
+    NgxMaskModule.forRoot({
+      dropSpecialCharacters: false // ao salvar vai manter a mascara
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

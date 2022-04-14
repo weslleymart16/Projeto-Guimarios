@@ -15,6 +15,7 @@ export class FinishRegisterComponent implements OnInit {
   @Output() formEmitterFinish = new EventEmitter();
 
   hide = true;
+  hideN = true;
 
   constructor(private formBuilder: FormBuilder, private authService: AuthService, private snackBar: MatSnackBar, private router: Router) {
     this.formsFinishRegister = this.formBuilder.group({
@@ -43,5 +44,5 @@ export class FinishRegisterComponent implements OnInit {
     return { matching: false };
   }
 
- 
+
 }

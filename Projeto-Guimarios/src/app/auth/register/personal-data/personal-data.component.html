@@ -10,7 +10,7 @@
     <div class="form-register-input">
       <mat-form-field appearance="fill">
         <mat-label>Data de nascimento</mat-label>
-        <input formControlName="dataDeNascimento" matInput required />
+        <input mask="00/00/0000" formControlName="dataDeNascimento" matInput required />
       </mat-form-field>
     </div>
 
@@ -34,7 +34,7 @@
     <div class="form-register-input">
       <mat-form-field appearance="fill">
         <mat-label>CPF</mat-label>
-        <input formControlName="cpf" matInput required />
+        <input mask="000.000.000-00" formControlName="cpf" matInput required />
       </mat-form-field>
     </div>
 
@@ -42,8 +42,8 @@
       <mat-form-field appearance="fill">
         <mat-label>Turma</mat-label>
         <mat-select required formControlName="turma">
-          <mat-option value="1">1</mat-option>
-          <mat-option value="2">2</mat-option>
+          <mat-option value="Front-end">Front-end</mat-option>
+          <mat-option value="Back-end">Back-end</mat-option>
         </mat-select>
       </mat-form-field>
     </div>

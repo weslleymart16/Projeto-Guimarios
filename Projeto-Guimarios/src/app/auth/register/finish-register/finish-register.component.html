@@ -25,9 +25,9 @@
     <div class="form-register-input">
       <mat-form-field appearance="fill">
         <mat-label>Digite a senha novamente</mat-label>
-        <input formControlName="confirmSenha" matInput [type]="hide ? 'password' : 'text'">
-        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        <input formControlName="confirmSenha" matInput [type]="hideN ? 'password' : 'text'">
+        <button mat-icon-button matSuffix (click)="hideN = !hideN" [attr.aria-label]="'hideN password'" [attr.aria-pressed]="hideN">
+          <mat-icon>{{hideN ? 'visibility_off' : 'visibility'}}</mat-icon>
         </button>
       </mat-form-field>
     </div>

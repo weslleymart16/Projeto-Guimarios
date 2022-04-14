@@ -2,7 +2,7 @@
   <div class="screen-register">
     <header class="header-register">
       <div class="header-logo">
-        <img src="../../../assets/Logo_Logomark_1.png" />
+        <img routerLink="/login" src="../../../assets/Logo_Logomark_1.png" />
         <h1>Guimarios</h1>
       </div>
 
@@ -16,15 +16,15 @@
         <nav>
           <ul>
               <li>
-                <a (click)="personalData()"><i class="bi bi-person-circle"></i></a>
+                <a  [ngStyle]="{'color': (viewController.iconPersD ? '#07bce5' : '')}" (click)="personalData()"><i class="bi bi-person-circle"></i></a>
               </li>
-              <div class="line-link"></div>
+              <div [ngStyle]="{'backgroundColor': (viewController.iconAdd ? '#07bce5' : '#A1A1A1')}" class="line-link"></div>
               <li>
-                <a (click)="address()"><i class="bi bi-house-door"></i></a>
+                <a [ngStyle]="{'color': (viewController.iconAdd ? '#07bce5' : '#A1A1A1')}" (click)="address()"><i class="bi bi-house-door"></i></a>
               </li>
-              <div class="line-link"></div>
+              <div [ngStyle]="{'backgroundColor': (viewController.iconFinsh ? '#07bce5' : '#A1A1A1')}" class="line-link"></div>
               <li>
-                <a (click)="finishRegister()"><i class="bi bi-check-circle-fill"></i></a>
+                <a [ngStyle]="{'color': (viewController.iconFinsh ? '#07bce5' : '#A1A1A1')}" (click)="finishRegister()"><i class="bi bi-check-circle-fill"></i></a>
               </li>
           </ul>
         </nav>

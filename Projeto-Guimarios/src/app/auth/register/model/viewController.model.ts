@@ -4,4 +4,8 @@ export interface ViewController {
     personalData: boolean;
     finishRegister: boolean;
 
+    iconPersD: boolean;
+    iconAdd: boolean;
+    iconFinsh: boolean;
+
 }

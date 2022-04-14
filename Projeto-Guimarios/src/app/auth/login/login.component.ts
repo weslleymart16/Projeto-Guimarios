@@ -1,3 +1,4 @@
+import { User } from './../user';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
@@ -53,13 +54,16 @@ export class LoginComponent implements OnInit {
 
   }
 
+  teste(){
+  }
+
   loginGoogle(){
 
   }
 
   register() {
     this.loading = true;
-    this.router.navigateByUrl('register');
+    this.router.navigate(['/register']);
   }
 
 }

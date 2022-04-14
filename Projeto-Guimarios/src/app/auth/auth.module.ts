@@ -1,3 +1,5 @@
+import { NgxMaskModule } from 'ngx-mask';
+import { FirestoreService } from './services/firestore.service';
 import { AuthGuard } from './../core/guards/auth-guard';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -11,6 +13,8 @@ import { PersonalDataComponent } from './register/personal-data/personal-data.co
 import { FinishRegisterComponent } from './register/finish-register/finish-register.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
+
+
 
 
 
@@ -28,9 +32,11 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     AuthRoutingModule,
     MaterialModule,
     ReactiveFormsModule,
+    NgxMaskModule.forChild()
   ],
   providers: [
-    AuthGuard
+    AuthGuard,
+    FirestoreService
   ]
 })
 export class AuthModule { }

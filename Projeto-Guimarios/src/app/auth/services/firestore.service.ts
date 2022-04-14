@@ -1,26 +1,52 @@
-import { collection } from 'firebase/firestore';
-import { Observable } from 'rxjs';
+import { environment } from './../../../environments/environment';
 import { AuthService } from './../auth.service';
 import { User } from './../user';
-import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/compat/firestore';
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
 import { Injectable } from '@angular/core';
+import { getFirestore, collection, addDoc, Firestore } from "firebase/firestore";
+import { initializeApp } from "firebase/app";
+import { FirebaseApp } from '@angular/fire/app';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class FirestoreService {
 
-  private usersCollection: AngularFirestoreCollection<User>;
-  users$: Observable<User[]>
+  private app: FirebaseApp;
+  private db: Firestore;
 
   constructor(private afs: AngularFirestore, private authService: AuthService) {
 
-    this.usersCollection = this.afs.collection<User>('users');
-    this.users$ = this.usersCollection.valueChanges();
-
+    this.app = initializeApp(environment.firebaseConfig);
+    this.db = getFirestore(this.app)
   }
 
-  getDataUsers (user: User) {
+ async register (user: User) {
+
+    try {
+
+      const docRef = await addDoc(collection(this.db, "users"), {
+          nome: user.nome,
+          dataDeNascimento: user.dataDeNascimento,
+          sobrenome: user.sobrenome,
+          genero: user.genero,
+          cpf: user.cpf,
+          turma: user.turma,
+          rua: user.rua,
+          complemento: user.complemento,
+          bairro: user.bairro,
+          cidade: user.cidade,
+          numero: user.numero,
+          estado: user.estado,
+          email: user.email
+      });
+      console.log("Document written with ID: ", docRef.id);
+
+    } catch (e) {
+
+      console.error("Error adding document: ", e);
+
+    }
+
+
 
   }
 
