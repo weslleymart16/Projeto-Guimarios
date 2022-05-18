@@ -5,6 +5,7 @@
 <div align="center">
  
  ## Login de Acesso : weslley@gmail.com senha: 123456
+ <b>Obs. Você pode se cadastrar e ter seu próprio acesso.<b>
  
  Tela de login
  
